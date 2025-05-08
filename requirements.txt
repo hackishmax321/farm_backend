@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+bcrypt
+python-multipart
+pandas
+joblib
+google-cloud-firestore
+firebase-admin
+numpy
+pillow
+tensorflow
+scikit-learn
+requests
+roboflow

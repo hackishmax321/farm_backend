@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "3842191b-9604-42b4-b0cf-83d0248e2541",
+		"name": "Farm Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8516381"
+	},
+	"item": [
+		{
+			"name": "Feed Patern",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cattle_breed\": \"Friesian\",\r\n  \"health_status\": \"Healthy\",\r\n  \"status\": \"Lactating\",\r\n  \"feeding_amount_KG_morning\": 5.0,\r\n  \"score_morning\": 8.0,\r\n  \"feeding_amount_KG_noon\": 6.0,\r\n  \"score_noon\": 7.5,\r\n  \"feeding_amount_KG_evening\": 4.5,\r\n  \"score_evening\": 7.0,\r\n  \"travel_distance_per_day_KM\": 12.0\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/predict_food_type",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"predict_food_type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Farm Border Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"user123\",\r\n    \"farm_name\": \"Green Acres\",\r\n    \"details\": \"A small organic farm in the countryside\",\r\n    \"border\": [\r\n        {\"lat\": 23.35345, \"lng\": 23.3535},\r\n        {\"lat\": 23.35400, \"lng\": 23.3541},\r\n        {\"lat\": 23.35500, \"lng\": 23.3552}\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/mark-farm-border",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"mark-farm-border"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feed Pattern Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cattle_id\": \"1\",\r\n    \"cattle_name\": \"A1\",\r\n    \"cattle_breed\": \"Jersey\",\r\n    \"farm\": \"F1\",\r\n    \"place_nu\": \"F1-L-1\",\r\n    \"health_status\": \"Healthy\",\r\n    \"status\": \"Lactating\",\r\n    \"feeding_pattern_id\": \"FP_1\",\r\n    \"feeding_time_morning\": \"9/24/24 8:00\",\r\n    \"food_type_morning\": \"Coconut Poonac\",\r\n    \"feeding_amount_KG_morning\": 3.0,\r\n    \"score_morning\": 2,\r\n    \"nutrition_info_morning\": \"High-energy, high protein\",\r\n    \"feeding_time_noon\": \"9/24/24 12:00\",\r\n    \"food_type_noon\": \"Napier Grass, Guinea grass\",\r\n    \"feeding_amount_KG_noon\": 5.0,\r\n    \"score_noon\": 2,\r\n    \"nutrition_info_noon\": \"High-fiber, moderate protein, moderate energy\",\r\n    \"feeding_time_evening\": \"9/24/24 17:00\",\r\n    \"food_type_evening\": \"Paddy Straw, Legumes\",\r\n    \"feeding_amount_KG_evening\": 3.0,\r\n    \"score_evening\": 2,\r\n    \"nutrition_info_evening\": \"High-fiber, low protein, low energy\",\r\n    \"feed_platform\": \"cement\",\r\n    \"feed_bunk\": \"A1-bunk\",\r\n    \"feeding_amount_KG_L\": 3.67,\r\n    \"travel_distance_per_day_KM\": 1.5,\r\n    \"farmers_id\": \"FAR-118-20\",\r\n    \"farmer_name\": \"Gamage\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/feed-patterns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"feed-patterns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Breed Insight",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"breed_name\": \"Jersey\",\r\n  \"adopted\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/insights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"insights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feed Pattern Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/feed-patterns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"feed-patterns"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
