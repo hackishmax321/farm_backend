@@ -13,4 +13,6 @@ tensorflow
 scikit-learn
 requests
 inference-sdk
+openpyxl
 roboflow
+
